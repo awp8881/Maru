@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lovo.manageservice.mapper.ManageMapper">
+
+
+
+
+    <insert id="addSku" parameterType="SkuBean">
+        insert into sku (skuName, skuPic,price)
+        values (#{name},#{pic},#{price});
+    </insert>
+
+    <select id="getAllSku" resultMap="AllSku">
+        select s.id,s.skuName,s.skuPic,s.price from sku as s;
+    </select>
+
+    <select id="getSkuById" resultMap="AllSku">
+        select s.id,s.skuName,s.skuPic,s.price from sku as s
+        <where>
+            s.id = #{id};
+         </where>;
+    </select>
+
+
+
+    <resultMap id="AllSku" type="com.lovo.api.bean.skuBean">
+        <result column="id" property="id"></result>
+        <result column="skuName" property="name"></result>
+        <result column="skuPic" property="pic"></result>
+        <result column="price" property="price"></result>
+    </resultMap>
+
+</mapper>

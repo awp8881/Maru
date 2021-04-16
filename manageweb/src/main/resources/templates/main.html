@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/jquery-2.1.4.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+                                添加新商品 <br>
+          <form action="http://127.0.0.1:9001/saveSku" method="post" enctype="multipart/form-data">
+            商品名称： <input type="text" id = "in1" name="skuName">   <br>
+            商品价格： <input type="text" id = "in2" name="price">   <br>
+
+            图片：<input type="file" name="pic"> <br><br>
+
+              <input type="submit" value="上传商品信息" id="b2">
+           </form>
+
+        <script >
+
+
+        </script>
+</body>
+</html>

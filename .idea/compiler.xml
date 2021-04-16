@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mallservice" />
+        <module name="api" />
+        <module name="mallweb" />
+        <module name="eureka" />
+        <module name="carweb" />
+        <module name="itemweb" />
+        <module name="passprot" />
+        <module name="webutil" />
+        <module name="manageservice" />
+        <module name="manageweb" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="carweb (1)" target="1.8" />
+      <module name="webutil" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api" options="" />
+      <module name="carweb" options="" />
+      <module name="eureka" options="" />
+      <module name="itemweb" options="" />
+      <module name="mallservice" options="" />
+      <module name="mallweb" options="" />
+      <module name="manageservice" options="" />
+      <module name="manageweb" options="" />
+      <module name="passprot" options="" />
+      <module name="webutil" options="" />
+    </option>
+  </component>
+</project>

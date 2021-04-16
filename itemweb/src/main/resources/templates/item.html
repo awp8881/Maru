@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-2.1.4.js"></script>
+    <title>Document</title>
+</head>
+<body>
+                        ********************************商品详情**********************************
+        <div style="width:215px" >
+            <p class="da">
+
+
+                    <img th:src="${skuInfo.getPic()}" class="dim">
+
+            </p>
+
+            <p class="tab_R">
+                <span th:text="'￥'+${#numbers.formatDecimal(skuInfo.getPrice(),1,2)}"></span>
+            </p>
+
+            <a href="#" title=""  class="tab_JE"
+               th:utext="${skuInfo.getName()}">
+            </a>
+
+
+            <form action="http://localhost:9004/carList" method="get">
+                <input type="hidden" name="skuId" id = "aaa" th:value="${skuInfo.getId()}">
+                <input type="submit" value="加入购物车">
+            </form>
+
+
+
+        </div>
+
+
+<script>
+
+
+</script>
+
+
+</body>
+</html>
